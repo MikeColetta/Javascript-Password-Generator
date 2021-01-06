@@ -12,6 +12,15 @@ console.log(numericChar)
 console.log(lowercaseChar)
 console.log(uppercaseChar)
 
+//select criteria
+
+//ask password length
+
+//password criteria (Lowercase? Uppercase? Numbers? Special Characters?)
+
+//validate character input
+
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
