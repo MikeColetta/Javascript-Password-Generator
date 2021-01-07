@@ -7,23 +7,17 @@ var upperCaseChar = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L",
 var lowerCaseChar = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 var allChosenChar = []
 
-//can I make an array without typing every number 1-128 out?
 const passwordMaxLength = 128
 const passwordMinLength = 8
 
+// console.log(allChosenChar.concat(specialChar, numericChar, upperCaseChar, lowerCaseChar))
 
 // console.log(specialChar)
 // console.log(numericChar)
 // console.log(lowercaseChar)
 // console.log(uppercaseChar)
 
-//select criteria using ids from the html
 
-//ask password length function
- 
-//password criteria (Lowercase? Uppercase? Numbers? Special Characters?)
-
-//validate character input
 function generatePassword () {
   var passwordLength = prompt("How long is your password?")
 
@@ -33,20 +27,39 @@ function generatePassword () {
   }
 
   var hasLowercase = confirm("Do you want lowercase?")
+  if (hasLowercase = true)  {
+    allChosenChar.concat(lowerCaseChar);
+  }
+  
   var hasUppercase = confirm("Do you want uppercase?")
+  if (hasUppercase = true) {
+    allChosenChar.concat(upperCaseChar);
+  }
+  
   var hasNumbers = confirm("Do you want numbers?")
+  if (hasNumbers = true) {
+    allChosenChar.concat(numericChar);
+  }
+
   var hasSpecChar = confirm("Do you want special characters?")
+  if (hasSpecChar = true) {
+    allChosenChar.concat(specialChar);
+  }
+  
   var password = ""
 
   for(var i=0; i<passwordLength; i++) {
-    var randomIndex = Math.floor(Math.random()*lowerCaseChar.length)
-    password+=lowerCaseChar[randomIndex]
+    var randomIndex = Math.floor(Math.random()*allChosenChar.length)
+    password+=allChosenChar[randomIndex]
     }
+
+  // for(var i=0; i<passwordLength; i++) {
+  //   var randomIndex = Math.floor(Math.random()*lowerCaseChar.length)
+  //   password+=lowerCaseChar[randomIndex]
+  //   }
+
   return password
 }
-
-Math.random
-
 
 // Write password to the #password input
 function writePassword() {
