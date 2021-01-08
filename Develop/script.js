@@ -19,48 +19,51 @@ const passwordMinLength = 8
 // console.log(lowercaseChar)
 // console.log(uppercaseChar)
 
+//gets password criteria.
 
+//gets password length
 function generatePassword () {
-  var passwordLength = prompt("How long is your password?")
+  var passwordLength = prompt("How long is your password?");
 
+  //if password is not between 8 - 128 characters
   if (passwordLength<passwordMinLength || passwordLength>passwordMaxLength) {
-    alert("Password is not between 8 - 128 characters!")
+    alert("Password is not between 8 - 128 characters!");
     return ""
   }
-
-  var hasLowercase = confirm("Do you want lowercase?")
+  
+  //asks and adds lowercase if true
+  var hasLowercase = confirm("Do you want lowercase?");
   if (hasLowercase = true)  {
     allChosenChar += lowerCaseChar;
   }
   
-  var hasUppercase = confirm("Do you want uppercase?")
+  //asks and adds uppercase if true
+  var hasUppercase = confirm("Do you want uppercase?");
   if (hasUppercase = true) {
     allChosenChar += upperCaseChar;
   }
   
-  var hasNumbers = confirm("Do you want numbers?")
+  //asks and adds numbers if true
+  var hasNumbers = confirm("Do you want numbers?");
   if (hasNumbers = true) {
     allChosenChar += numericChar;
   }
 
-  var hasSpecChar = confirm("Do you want special characters?")
+  //asks and adds special characters if true
+  var hasSpecChar = confirm("Do you want special characters?");
   if (hasSpecChar = true) {
     allChosenChar += specialChar;
   }
   
   var password = ""
 
+  //randomizes passoword based on character criteria
   for(var i=0; i<passwordLength; i++) {
-    var randomIndex = Math.floor(Math.random()*allChosenChar.length)
+    var randomIndex = Math.floor(Math.random()*allChosenChar.length);
     password+=allChosenChar[randomIndex]
     }
 
-  // for(var i=0; i<passwordLength; i++) {
-  //   var randomIndex = Math.floor(Math.random()*lowerCaseChar.length)
-  //   password+=lowerCaseChar[randomIndex]
-  //   }
-
-  return password
+  return password;
 }
 
 // Write password to the #password input
