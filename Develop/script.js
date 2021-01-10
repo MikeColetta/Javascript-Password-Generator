@@ -2,9 +2,9 @@
 var generateBtn = document.querySelector("#generate");
 
 //Character arrays
-var specialChar = ["!", "@", "#", "$", "%", "^", "&", "*"]
-var numericChar = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-var upperCaseChar = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+var specialChar = [" !", "@", "#", "$", "%", "^", "&", "*"]
+var numericChar = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+var upperCaseChar = [" A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 var lowerCaseChar = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 var allChosenChar = ""
 
@@ -35,21 +35,21 @@ function generatePassword () {
   
   //Asks and adds uppercase if true
   var hasUppercase = confirm("Do you want uppercase?");
-  if (hasUppercase = true) {
+  if (hasUppercase) {
     allChosenChar += upperCaseChar;
     console.log(allChosenChar)
   }
   
   //Asks and adds numbers if true
   var hasNumbers = confirm("Do you want numbers?");
-  if (hasNumbers = true) {
+  if (hasNumbers) {
     allChosenChar += numericChar;
     console.log(allChosenChar)
   }
 
   //Asks and adds special characters if true
   var hasSpecChar = confirm("Do you want special characters?");
-  if (hasSpecChar = true) {
+  if (hasSpecChar) {
     allChosenChar += specialChar;
     console.log(allChosenChar)
   }
@@ -60,7 +60,7 @@ function generatePassword () {
   //Randomizes password based on character criteria
   for(var i=0; i<passwordLength; i++) {
     var randomIndex = Math.floor(Math.random()*allChosenChar.length);
-    password += allChosenChar[randomIndex]
+    password += allChosenChar[randomIndex];
     }
 
   return password;
