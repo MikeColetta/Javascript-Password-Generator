@@ -2,7 +2,7 @@
 var generateBtn = document.querySelector("#generate");
 
 //Character arrays
-var specialChar = ['!@#$%^&']
+var specialChar = [' !”#$%&’()*+,-./:;<=>?@[\]`{|}~']
 var numericChar = ['0123456789']
 var upperCaseChar = ['ABCDEFGHIJKLMNOPQRSTUVWXYZ']
 var lowerCaseChar = ['abcdefghijklmnopqrstuvwxyz']
@@ -21,7 +21,7 @@ function generatePassword () {
   var passwordLength = prompt("How long is your password?");
 
   //If password is not between 8 - 128 characters
-  if (passwordLength<passwordMinLength || passwordLength>passwordMaxLength) {
+  if (passwordLength<passwordMinLength || passwordLength>passwordMaxLength || isNaN(passwordLength)) {
     alert("Password is not between 8 - 128 characters!");
     return ""
   }
