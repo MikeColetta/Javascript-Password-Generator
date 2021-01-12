@@ -2,7 +2,7 @@
 var generateBtn = document.querySelector("#generate");
 
 //Character arrays
-var specialChar = [' !”#$%&’()*+,-./:;<=>?@[\]`{|}~']
+var specialChar = [' !\”#$%&’()*+,-./:;<=>?@[\\]`{|}~']
 var numericChar = ['0123456789']
 var upperCaseChar = ['ABCDEFGHIJKLMNOPQRSTUVWXYZ']
 var lowerCaseChar = ['abcdefghijklmnopqrstuvwxyz']
