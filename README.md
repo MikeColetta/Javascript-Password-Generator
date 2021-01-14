@@ -11,9 +11,9 @@ Initially I started changing the HTML to add checkboxes the user would click to 
 
 My script works first by prompting the user how long they would like their password. If the length follows according to the parameter of 8-128 then it asks for what characters they wish to include. If they choose a selected character that is then concatenated onto a blank array called allChosenChar. That array is then put through my randomizer function that incrementally adds characters to the password until it reaches the length prompted by the user.
 
-Overall, I had a tough time with this assignment, but the help from my tutors, TAs and my peers really helped me understand the concept from what I was trying to build. If I could do the process again I would pseudocode out every step with notes first. I did that with my tutor after I had already started and it helped immensely. 
+After getting the function to work I had some details I needed to add. I used toNAN to make sure if the user puts a letter in the prompt, it corrects the user and goes back to the beginning. I also had to fix the special characters and use the ones provided in the assignment. The big debugging challenge I had was initially my array of special characters were all separated by a comma. That made all of the extra commas go into my password as characters. I fixed this by making each character variable one long string instead. 
 
-After getting the function to work I had some details I needed to add. I used toNAN to make sure if the user puts a letter in the prompt, it corrects the user and goes back to the beginning. I also had to fix the special characters and use the ones provided in the assignment.
+Overall, I had a tough time with this assignment, but the help from my tutors, TAs and my peers really helped me understand the concept from what I was trying to build. If I could do the process again I would pseudocode out every step with notes first. I did that with my tutor after I had already started and it helped immensely. 
 
 ## Project Link
 [Deployed Link](https://mikecoletta.github.io/Javascript-Password-Generator/)
